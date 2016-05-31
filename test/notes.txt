@@ -1,0 +1,47 @@
+test.js 
+
+I think it might be a gameplay grid. of 4 x 10
+I think I need to figure out how to create a loop of objects into a state.
+
+I need to pop and push items into an array, which will display onto a UI.
+
+so, the array will contain symbols which relate to the different UI elements
+
+var array = [x,o,o,o,p,o,p,p,o]
+
+and the array will constantly pop and push 
+pop, shift
+
+best beginning and ending access algorithm
+
+// LEGEND
+
+o - wall, ground. 
+
+
+IMPORT ! For the next test, you could alternatively have four different arrays for the different heights. That would make more sense, I think.
+
+IMPORT ! Instead of putting into a tile, it might make more sense to create your own tile imo.
+
+
+test_2.js 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
