@@ -47,12 +47,13 @@ var h2Logic = [0,0,0];
 var h3Logic = [0,0,0];
 // 1 is wall
 // 0 is ground. 
- 
-function moveField(gameLogic,tileArray) {
+
+
+function uiLogic(gameLogic, tileArray) { 
 	for (var i = 0; i < gameLogic.length; i++) {
 
 		var g = "________";
-		var w = "|"
+		var w = "|";
 
 		if (gameLogic[i] === 1) {
 			tileArray[i].innerHTML = w;
@@ -60,14 +61,33 @@ function moveField(gameLogic,tileArray) {
 			tileArray[i].innerHTML = g;
 		} 
 	};
+}
 
+
+function tileChange(gameLogic,tileArray) { 
+	uiLogic(gameLogic,tileArray);
 	logicConditions(gameLogic);
-
-	// need to iterate into other arrays 
-
-} 
+}
 
 
 
-setInterval(moveField.bind(this,h1Logic,h1Tiles), 1000)
 
+	setInterval(tileChange.bind(this, h1Logic, h1Tiles), 1000);
+
+
+
+/*
+	setInterval(trickle.bind(this, h2Logic, h2Tiles, h1Logic), 1000);
+
+
+
+function trickle(gameLogic, tileArray, tileCopy) {
+	gameLogic = tileCopy;
+	uiLogic(gameLogic, tileArray);
+}
+
+
+
+
+
+*/
