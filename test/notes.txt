@@ -28,14 +28,33 @@ test1_5.js
 
 I can't for the life of me get the array to copy itself into another logic array, and simply "trickle" down. I think the setInterval is what may be caulsing it not to work. Maybe it doesn't hvae enough functions? Too many functions perhaps, lol. Possibly.
 
+To what extent do I need to.... maybe it would work better with one array. hmmmm. 
 
 
 
+test1_6.js 
+
+Okay, so I've dramatically simplified it, however it needs some work. Taking a break before I go insane. 
 
 
 
+test2_1.js 
+
+So... perhaps I need to stop looking at each different phase as works, or from the point of view of states. containing state.
 
 
+GAME ARRANGEMENT
+
+h1Arrays - contains logic to convey to UI symbols.
+
+h1Arrangement - determines what the h1Array IS.
+
+trickle - changes the h2 and h3 functions.
+
+
+Problem is that ONCE trickle goes through, it doesn't change again. I THINK because of setTimeout.
+
+OKAY. So it does work, but it just moves so fast, you can't see it. 
 
 
 
