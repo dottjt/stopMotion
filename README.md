@@ -14,9 +14,9 @@ test2_1.js - devise function to print all arrays at once :). Trickle works now. 
 
 SO FAR test2_1.js contains 3 single arrays for each row AND can trickle down from value in 1st array to arrays 2 and 3. 
 
-test2_2.js - Add condition statetment to determine h1Array value. Works 02-06-16
+test2_2.js - Add condition statetment to determine h1Array value. Works 03-06-16
 
-test2_3.js - Problem is that while it trickles, it doesn't change previous values to 0. Changing this behaviour. Works 02-06-16 Finally got to trickle perfectly :)))))
+test2_3.js - Problem is that while it trickles, it doesn't change previous values to 0. Changing this behaviour. Works 03-06-16 Finally got to trickle perfectly :)))))
 
 ## Create basic UI
 
