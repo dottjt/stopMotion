@@ -20,11 +20,20 @@ test2_3.js - Problem is that while it trickles, it doesn't change previous value
 
 ## Create basic UI
 
-test3.js - Create basic UI responding to the logic. Gonna be hard. Might take a break for today.  
+test3.js - Create basic UI responding to the logic. Gonna be hard. Might take a break for today. NON FINISHED>
+
+BROKEN test3_1.js - want to make potentially breaking changes by removing h1 array and just working from the total array. 
+
+BROKEN test3_2.js - trying two different functions at once. INSTEAD, I'll just work with more temporary variables instead
+
+WORKS test3_1.js - Okay, so it works with temporary variables. The only issue is the setInterval that DOESN"T work. 
 
 
+## Character Movement
 
+test3_3.js - modify 3_1.js and add character movement to the game. 
 
+test3_4.js - Okay! Exapanded the grid to successfully trickle down the entire 3 x 4 grid! I needed to, so I can add function movement :) 
 
 
 

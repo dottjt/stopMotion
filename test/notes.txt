@@ -59,7 +59,64 @@ OKAY. So it does work, but it just moves so fast, you can't see it.
 
 
 
+test3_1.js 
 
+Let's try and look at the logic of this. 
+
+
+
+We have set interval that EVERY second, triggers. 
+
+What it triggers is a function which initially sets total:
+Ones in the middle go a tad bit quicker. 
+ACTUALLY, Time it takes is irrelevant, because it doesn't affect state. 
+So 990, then 980;
+
+1 second; 					1 second
+event trigger
+trickle1 sets total[0]. 
+
+then 1 second;				2 second
+event trigger
+tricle1 total[1] = total[0];   	// conflict. 
+trickle2 total[0] set; 
+
+then 1 second;				3 second
+event trigger 
+trickle1 total[2] = total[1]	// conflict
+trickle2 total[1] = total[0] 
+trickle3 set total[0]
+
+then 1 second;				4 second
+event trigger 
+trickle1 ends. 
+trickle2 set total[2] = total[1]	//conflict
+trickle3 set total[1] = total[0];
+trickle4 set total[0];
+
+So, let's try and get rid of this conflict. 
+
+1 second; 					1 second
+event trigger
+trickle1 sets total[0]. 
+
+then 1 second;				2 second
+event trigger
+tricle1 total[1] = total[0];   	// conflict. h1Array 
+trickle2 total[0] set; 
+
+then 1 second;				3 second
+event trigger 
+trickle1 total[2] = total[1]	// conflict 
+trickle2 total[1] = total[0] 
+trickle3 set total[0]
+
+then 1 second;				4 second
+event trigger 
+trickle1 ends. 
+trickle2 set total[2] = total[1]	//conflict
+trickle3 set total[1] = total[0];
+trickle4 set total[0];
 
 
 

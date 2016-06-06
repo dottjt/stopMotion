@@ -3,15 +3,9 @@ var t11 = document.getElementById("t11");
 var t111 = document.getElementById("t111");
 
 
-var h1Array = [1];
-var h2Array = [0];
-var h3Array = [0];
-var h32Array = [0]
-
 var t1Tile = [t1,t11,t111]
 
-var total = [0,0,0]
-
+var total = [1,0,0]
 
 
 function UIchange() {
@@ -41,7 +35,7 @@ function oneOrZero() {
 }
 
 function h1Condition() {
-	if (h1Array[0] === 1) {
+	if (total[0] === 1) {
 		return 0
 	} else {
 		return oneOrZero();
@@ -61,61 +55,47 @@ function UIConnector(array, tile) {
 
 
 
+
 function trickle() {
-	// Generate condition. 
-	// h1Array[0] = h1Condition();
 
+	var temptotal0 = total[0];
 
-	total[0] = h1Array[0] // total 
+	// console.log(total);
 	UIchange();
 
-	console.log(total);
-	console.log(h1Array[0]);
-
-	// h1Array[0] = condition();
 	setTimeout(function() {
+		total[1] = temptotal0;
 
-		h2Array[0] = h1Array[0]; 
-		
-		total[1] = h2Array[0];
+		var temptotal1 = total[1];
+		total[0] = 0; // maybe change to something else? 
+
+		// console.log(total);
 		UIchange();
 
-
-		h1Array[0] = 0;
-
-		total[0] = h1Array[0];
-
-		
-		console.log(total);
-		console.log(h2Array[0]);
-
 		setTimeout(function() {
+			total[2] = temptotal1
 
-			h3Array[0] = h2Array[0];
-			
-			total[2] = h3Array[0]
+			var temptotal2 = total[1];
+			total[1] = 0;
+
+			// console.log(total);
 			UIchange();
 
-			h2Array[0] = 0;
+			setTimeout(function() {
+				total[2] = 0;
+				UIchange();
 
-			total[1] = h2Array[0];
+			}, 1000);
 
-			console.log(total);
-			console.log(h2Array[0]);
+		}, 1000);
 
-
-		}, 1200)
-
-	}, 1100)
-
-	
+	}, 1000);
+	console.log(total);
 }
 
 
 
+var trickleh1 = setInterval(trickle, 1000)
 
-var gamePlay = setInterval(trickle, 1000);
+var updateUI = setInterval(UIchange, 1000);
 
-/*
-
-*/
